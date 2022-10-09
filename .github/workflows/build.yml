@@ -33,3 +33,7 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
           repository: dhruv3096/docker-hub-test
           tags: latest, ${{ github.run_number }}
+        env:
+          API_TOKEN: ${{ secrets.API_TOKEN }}
+          AIRTABLE_BASE_ID: ${{ secrets.AIRTABLE_BASE_ID }}
+          MIXPANEL_TOKEN: ${{ secrets.MIXPANEL_TOKEN }}
