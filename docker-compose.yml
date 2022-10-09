@@ -1,0 +1,25 @@
+######################################################################################################
+# This is a docker compose file to use for local development and testing of ops api.                 #
+# Changes in .botfront/botfront.yml and .botfront/docker-compose-template.yml will be reflected here #
+######################################################################################################
+
+# need to confirm container image
+# confirm starting volume
+# confirm starting network
+# confirm starting command
+# test config airtable env file
+
+version: '3.0'
+services:
+  ops_api:
+    image: operations_api:latest
+    ports:
+      - "4080:4080"
+    env_file:
+      - .env
+    # environment:
+    #   API_TOKEN:
+networks:
+  ops_api-network: {}
+
+# this image must be brought up separately to botfront and after botfront
